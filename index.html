@@ -30,42 +30,44 @@
 
   <!--INICIA HEADER-->
   <header>
-    <section>
+    <section class="bg_Morado d-flex justify-content-between py-2 px-3">
       <article>
-        <p>Teléfono: +54 9 11 6671-8271</p>
+        <p class="textWhite">Teléfono: +54 9 11 6671-8271</p>
         <!--Cambiar el teléfono por una imagen-->
       </article>
       <article>
-        <a href="" target="_blank">Insta</a>
-        <!--Buscar icono de la red social-->
-        <a href="" target="_blank">Face</a>
-        <!--Buscar icono de la red social-->
-        <a href="" target="_blank">Youtube</a>
-        <!--Buscar icono de la red social-->
+        <a href="https://instagram.com/venecake.sorpresas?igshid=YmMyMTA2M2Y=" target="_blank" class="px-1">
+          <img src="assets/images/logoInstagram.svg" alt="Instagram" width="24vw">
+        </a>
+        <a href="https://es-la.facebook.com/" target="_blank" class="px-1"><!--Conectar con Facebook-->
+          <img src="assets/images/logoFacebook.svg" alt="FaceBook" width="24vw">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="px-1"><!--Conectar con Youtube-->
+          <img src="assets/images/logoYouTube.svg" alt="YouTube" width="24vw">
+        </a>
       </article>
     </section>
-    <section>
-      <img src="assets/images/globos_intro.jpg" alt="Imagen de globos">
+    <section class="index_Presentacion">
       <article>
-        <h1>Venecake Sorpresas</h1>
-        <p>¡Viví tus sueños!</p>
+        <h1 class="fs-1">Venecake Sorpresas</h1>
+        <p class="fs-2">¡Viví tus sueños!</p>
       </article>
       <article>
-        <ul>
+        <ul class="indexNav">
           <li>
-            <a href="pages/galeria.html">Galería</a>
+            <a href="pages/galeria.html" class="navLink fs-4">Galería</a>
           </li>
           <li>
-            <a href="pages/servicios.html">Servicios</a>
+            <a href="pages/servicios.html" class="navLink fs-4">Servicios</a>
           </li>
           <li>
-            <a href="pages/tienda.html">Tienda</a>
+            <a href="pages/tienda.html" class="navLink fs-4">Tienda</a>
           </li>
           <li>
-            <a href="pages/nosotros.html">Nosotros</a>
+            <a href="pages/nosotros.html" class="navLink fs-4">Nosotros</a>
           </li>       
           <li>
-            <a href="pages/contacto.html">Contacto</a>
+            <a href="pages/contacto.html" class="navLink fs-4">Contacto</a>
           </li>
         </ul>  
       </article>
@@ -74,9 +76,9 @@
   <!--TERMINA HEADER-->
 
   <!--INICIA NAV-->
-  <nav class="navbar sticky-top navbar-expand-lg bg-light">
+  <nav class="navbar sticky-top navbar-expand-lg bg_Violeta">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">VenecakeSorpresas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -84,26 +86,43 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active" aria-current="page" href="pages/tienda.html">Tienda</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Bouquets</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Paredes</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Guirnaldas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Galería
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bouquets</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Paredes</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Guirnaldas</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contacto.html">Contacto</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -117,77 +136,59 @@
 
   <!--INICIA MAIN-->
   <main>
-    <section>
-      <h2>Nuestros Servicios</h2>
+    <section class="px-4 py-2">
+      <h2 class="my-3">Nuestros Servicios</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="assets/images/bouquet_globos_surtidos.jpg" class="card-img-top" alt="Bouquet de Globos especiales surtidos">
             <div class="card-body">
-              <h5 class="card-title">Bouquet</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title d-flex justify-content-center">Bouquet</h5>
+              <p class="card-text">Nuestros Bouquets de Globos son hechos con mucho Amor; ideales para sorprender y alegrar a los que mas queremos! </p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="assets/images/wall_globos.jpg" class="card-img-top" alt="Arco de guirnalda de globos azul y verde pastel - Globo azul cielo, globo verde claro, globo naranja, globo blanco marfil - 133 piezas - Kit de arco de guirnalda de globos para boda, graduación, fiesta infantil, Navidad, baby shower">
             <div class="card-body">
-              <h5 class="card-title">Walls</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <h5 class="card-title d-flex justify-content-center">Pared de Globos</h5>
+              <p class="card-text">Las paredes de Globos tienen muchas aplicaciones: perfectos para baby shower, navidad, graduación, fiesta hawaiana, boda, cumpleaños, despedida de soltera, fiesta tropical, fiestas, aniversarios y compromisos.</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="assets/images/garland_globos.jpg" class="card-img-top" alt="Látex Pastel Balloon Garland Kit Globos de confeti de oro para fiestas Baby Shower Cumpleaños">
             <div class="card-body">
-              <h5 class="card-title">Garlands</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <h5 class="card-title d-flex justify-content-center">Guirnaldas</h5>
+              <p class="card-text">Las Guirnaldas son Kits de tiras de decoración de globos largos para crear una increíble imagen de telón de fondo para baby shower, cumpleaños, despedida de soltero y bodas.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <h2>Galería</h2>
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+    <section class="px-4 py-2">
+      <h2 class="my-3">Galería</h2>
+      <div class="card-group">
+        <div class="card">
+          <img src="assets/images/bouquet_globos_surtidos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center">Bouquets</h5>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="card">
+          <img src="assets/images/wall_globos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center">Paredes</h5>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/garland_globos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center">Guirnaldas</h5>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -195,22 +196,27 @@
 
   <!--INICIA FOOTER-->
   <footer>
-    <section>
-      <img src="assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas">
-      <p>Venecake Sorpresas</p>
+    <section class="bg_Rosado px-4 py-2">
+      <article>
+        <img src="assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas" class="footer_Img_Logo">
+        <p>Venecake Sorpresas</p>
+      </article>
+      <article>
+        <h3>Menú</h3>
+      </article>
+      <article>
+        <h3>Contacto</h3>
+      </article>
+      <article>
+        <h3>Suscribite</h3>
+      </article>
     </section>
-    <section>
-      <h3>Menú</h3>
-    </section>
-    <section>
-      <h3>Contacto</h3>
-    </section>
-    <section>
-      Suscribite
-    </section>
-    <section>
-      <p>Hecho con amor por Luis Belisario</p><!--Buscar un corazon y hacer el link a la página de portfolio-->
-    </section>
+    <section class="d-flex justify-content-center align-items-center my-3">
+      <div class="mx-3">
+        <img src="assets/images/coracaozinho-para-o-luiz-otavio.svg" width="35" height="35" alt="Pequeño Corazón" >
+      </div>
+      <p class="footerP">2022 <a href="https://lebs87.github.io/Portfolio_Belisario_SASS/" target="blank">Luis Belisario. Web Developer.</a></p>
+  </section>
   </footer>
   <!--TERMINA FOOTER-->
 </body>

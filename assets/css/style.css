@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700; }
+
+p {
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  font-weight: 400; }
+
+h2 {
+  color: #bc0b6f;
+  text-align: center; }
+
+.textWhite {
+  color: #d3e9d7; }
+
+.textGreen {
+  color: #4dff70; }
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin: 0.4em; }
+
+.indexNav {
+  display: flex;
+  list-style: none; }
+
+.bg_Violeta {
+  background-color: #bc0b6f;
+  color: #d3e9d7; }
+
+.bg_Morado {
+  background-color: #740774; }
+
+/*RESET*/
+* {
+  padding: 0rem;
+  margin: 0rem; }
+
+body {
+  min-height: 100vh; }
+
+.logoVenecakeSorpresas {
+  width: 20vw; }
+
+.index_Presentacion {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/../assets/images/globos_intro.jpg);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  text-align: center; }
+
+.bg_Rosado {
+  background-color: #f5949c;
+  color: #740774; }
+
+.footer_Img_Logo {
+  border-radius: 50%;
+  width: 20vh;
+  height: 20vh; }

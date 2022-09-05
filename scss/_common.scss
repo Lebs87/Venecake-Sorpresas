@@ -1,0 +1,35 @@
+/*RESET*/
+*{
+    padding: 0rem;
+    margin: 0rem;
+}
+//GENERAL
+body{
+    min-height: 100vh;
+}
+.logoVenecakeSorpresas{
+    width: 20vw;
+}
+//INDEX
+.index_Presentacion{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/../assets/images/globos_intro.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
+}
+//FOOTER
+.bg_Rosado{
+    background-color: map-get($map: $colors, $key: "rosado");
+    color: map-get($map: $colors, $key: 'morado');
+}
+.footer_Img_Logo{
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+}

@@ -1,0 +1,11 @@
+.indexNav{
+    display: flex;
+    list-style: none;
+}
+.bg_Violeta{
+    background-color: map-get($map: $colors, $key: "violeta");
+    color: map-get($map: $colors, $key: 'white');
+}
+.bg_Morado{
+	background-color: map-get($map: $colors, $key: 'morado')
+}
