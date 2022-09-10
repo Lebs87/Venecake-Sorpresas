@@ -17,15 +17,145 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <!--FAVICON-->
-  <link rel="shortcut icon" href="assets/images/Logo VenecakeSorpresas.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/Logo VenecakeSorpresas.jpeg" type="image/x-icon">
   <!--CSS-->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <!--WOW-->
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="../assets/css/animate.css">
   <!--JS-->
-  <script defer src="js/index.js"></script>
+  <script defer src="../js/index.js"></script>
+  <script defer src="../js/variables.js"></script>
 </head>
 <body>
-    
+
+  <!--INICIA NAV-->
+  <nav class="navbar sticky-top navbar-expand-lg bg_Violeta">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">VenecakeSorpresas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./tienda.html">Tienda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bouquets</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Paredes</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Guirnaldas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./galeria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Galería
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bouquets</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Paredes</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Guirnaldas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--TERMINA NAV-->
+
+  <!--INICIA MAIN-->
+  <main>
+
+  </main>
+  <!--TERMINA MAIN-->
+
+  
+  <!--INICIA FOOTER-->
+  <footer class="container texcenter max_width">
+    <section class="px-4 py-2 row row-cols-1 row-cols-md-4 bg_Rosado">
+      <article class="col p-3 text-center d-flex align-items-center flex-column">
+        <img src="../assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas" class="footer_Img_Logo py-2">
+        <p>Venecake Sorpresas</p>
+        <p>¡Decoraciones de Globos para cualquier ocasión!</p>
+      </article>
+      <article class="col p-3">
+        <h3>Menú</h3>
+        <ul class="styleNav d-flex flex-column">
+          <li class="">
+            <a href="../index.html" class="navFooter fs-6">Inicio</a>
+          </li>
+          <li>
+            <a href="./galeria.html" class="navFooter fs-6">Galería</a>
+          </li>
+          <li>
+            <a href="./servicios.html" class="navFooter fs-6">Servicios</a>
+          </li>
+          <li>
+            <a href="./tienda.html" class="navFooter fs-6">Tienda</a>
+          </li>
+          <li>
+            <a href="./nosotros.html" class="navFooter fs-6">Nosotros</a>
+          </li>
+          <li>
+            <a href="#" class="navFooter fs-6">Contacto</a>
+          </li>
+        </ul>
+      </article>
+      <article class="col p-3">
+        <h3>Contacto</h3>
+        <p>Banfield. Provincia de Buenos Aires.</p>
+        <p><b>Teléfono:</b></p>
+        <p>+54 9 11 6671-8271</p>
+        <p><b>Correo:</b></p>
+        <p>Venecake@gmail.com</p>
+        <p><b>Web:</b></p>
+        <p>venecakesorpresas.com.ar</p>
+      </article>
+      <article class="col p-3">
+        <h3>Suscribíte</h3>
+        <p>¡Suscríbite a nuestro correo de noticias para que te mantengas informado de nuestras promociones y ofertas!</p>
+        <form action="envio.php" class="">
+          <div class="form">
+            <input type="email" class="form-control" id="email" placeholder="venecake@gmail.com">
+            <label for="email"></label>
+          </div>
+          <button type="submit" class="btn-neon">
+            <span class="span1"></span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+            Enviar
+        </button>
+        </form>
+      </article>
+    </section>
+    <section class="d-flex justify-content-center align-items-center my-3">
+      <div class="mx-3">
+        <img src="../assets/images/coracaozinho-para-o-luiz-otavio.svg" width="35" height="35" alt="Pequeño Corazón" >
+      </div>
+      <p class="footerP">2022 <a href="https://lebs87.github.io/Portfolio_Belisario_SASS/" target="blank">Luis Belisario. Web Developer.</a></p>
+  </section>
+  </footer>
+  <!--TERMINA FOOTER-->
 </body>
 </html>
