@@ -1,0 +1,12 @@
+.bg_Rosado{
+    background-color: map-get($map: $colors, $key: "rosado");
+    color: map-get($map: $colors, $key: 'morado');
+}
+.footer_Img_Logo{
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+}
+.max_width{
+    max-width: 100vw;
+}

@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <!--JS-->
   <script defer src="js/index.js"></script>
+  <script defer src="js/variables.js"></script>
 </head>
 
 <body>
@@ -32,8 +33,7 @@
   <header>
     <section class="bg_Morado d-flex justify-content-between py-2 px-3">
       <article>
-        <p class="textWhite">Teléfono: +54 9 11 6671-8271</p>
-        <!--Cambiar el teléfono por una imagen-->
+        <p class="textWhite">Teléfono: +54 9 11 6671-8271</p><!--Cambiar el teléfono por una imagen-->
       </article>
       <article>
         <a href="https://instagram.com/venecake.sorpresas?igshid=YmMyMTA2M2Y=" target="_blank" class="px-1">
@@ -52,21 +52,21 @@
         <h1 class="fs-1">Venecake Sorpresas</h1>
         <p class="fs-2">¡Viví tus sueños!</p>
       </article>
-      <article>
-        <ul class="indexNav">
-          <li>
-            <a href="pages/galeria.html" class="navLink fs-4">Galería</a>
+      <article class="container text-center">
+        <ul class="styleNav row justify-content-md-center">
+          <li class="">
+            <a href="pages/galeria.html" class="navLink fs-4 col col-lg-2">Galería</a>
           </li>
-          <li>
-            <a href="pages/servicios.html" class="navLink fs-4">Servicios</a>
+          <li clas="">
+            <a href="pages/servicios.html" class="navLink fs-4 col col-lg-2">Servicios</a>
           </li>
-          <li>
+          <li clas="col col-lg-2">
             <a href="pages/tienda.html" class="navLink fs-4">Tienda</a>
           </li>
-          <li>
+          <li clas="col col-lg-2">
             <a href="pages/nosotros.html" class="navLink fs-4">Nosotros</a>
           </li>       
-          <li>
+          <li clas="col col-lg-2">
             <a href="pages/contacto.html" class="navLink fs-4">Contacto</a>
           </li>
         </ul>  
@@ -126,8 +126,14 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="" type="search" placeholder=" Tipo de Globo" aria-label="Search"><!--Modelar input-->
+          <button class="btn-neon mx-1" type="submit">
+            <span class="span1"></span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+            Buscar
+          </button>
         </form>
       </div>
     </div>
@@ -195,20 +201,59 @@
   <!--TERMINA MAIN-->
 
   <!--INICIA FOOTER-->
-  <footer>
-    <section class="bg_Rosado px-4 py-2">
-      <article>
-        <img src="assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas" class="footer_Img_Logo">
+  <footer class="container texcenter max_width">
+    <section class="px-4 py-2 row row-cols-1 row-cols-md-4 bg_Rosado">
+      <article class="col p-3 text-center d-flex align-items-center flex-column">
+        <img src="assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas" class="footer_Img_Logo py-2">
         <p>Venecake Sorpresas</p>
+        <p>¡Decoraciones de Globos para cualquier ocasión!</p>
       </article>
-      <article>
+      <article class="col p-3">
         <h3>Menú</h3>
+        <ul class="styleNav d-flex flex-column">
+          <li>
+            <a href="pages/galeria.html" class="navFooter fs-6">Galería</a>
+          </li>
+          <li>
+            <a href="pages/servicios.html" class="navFooter fs-6">Servicios</a>
+          </li>
+          <li>
+            <a href="pages/tienda.html" class="navFooter fs-6">Tienda</a>
+          </li>
+          <li>
+            <a href="pages/nosotros.html" class="navFooter fs-6">Nosotros</a>
+          </li>
+          <li>
+            <a href="pages/contacto.html" class="navFooter fs-6">Contacto</a>
+          </li>
+        </ul>
       </article>
-      <article>
+      <article class="col p-3">
         <h3>Contacto</h3>
+        <p>Banfield. Provincia de Buenos Aires.</p>
+        <p><b>Teléfono:</b></p>
+        <p>+54 9 11 6671-8271</p>
+        <p><b>Correo:</b></p>
+        <p>Venecake@gmail.com</p>
+        <p><b>Web:</b></p>
+        <p>venecakesorpresas.com.ar</p>
       </article>
-      <article>
-        <h3>Suscribite</h3>
+      <article class="col p-3">
+        <h3>Suscribíte</h3>
+        <p>¡Suscríbite a nuestro correo de noticias para que te mantengas informado de nuestras promociones y ofertas!</p>
+        <form action="envio.php" class="">
+          <div class="form">
+            <input type="email" class="form-control" id="email" placeholder="venecake@gmail.com">
+            <label for="email"></label>
+          </div>
+          <button type="submit" class="btn-neon">
+            <span class="span1"></span>
+            <span class="span2"></span>
+            <span class="span3"></span>
+            <span class="span4"></span>
+            Enviar
+        </button>
+        </form>
       </article>
     </section>
     <section class="d-flex justify-content-center align-items-center my-3">

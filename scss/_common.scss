@@ -2,6 +2,7 @@
 *{
     padding: 0rem;
     margin: 0rem;
+    box-sizing: border-box;
 }
 //GENERAL
 body{
@@ -10,26 +11,80 @@ body{
 .logoVenecakeSorpresas{
     width: 20vw;
 }
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    color:  map-get($map: $colors, $key: 'morado');
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 10%;
+    border-color: map-get($map: $colors, $key: 'moradoTrans');
+    background-color: map-get($map: $colors, $key: 'rosadoTrans');
+    &:hover{
+        background-color: map-get($map: $colors, $key: 'darkYellow');
+        color: map-get($map: $colors, $key: 'white');
+        box-shadow: 0 0 10px map-get($map: $colors, $key: 'yellow'), 0 0 40px map-get($map: $colors, $key: 'yellow'), 0 0 80px map-get($map: $colors, $key: 'yellow');
+        transition-delay: 1s;
+        .span1{
+            left: 100%;
+            transition: 1s;
+        };
+        .span2{
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.25s;
+        };
+        .span3{
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        };
+        .span4{
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 0.75s;
+        };
+    }    
+    span{
+    position: absolute;
+    display: block;
+    }    
+}
+.span1{
+    top: 0;
+    left: -100%;
+    @include contact_span(100%,2px,linear-gradient(90deg, transparent, map-get($map: $colors, $key: 'azul')));
+}
+.span2{
+    top: -100%;
+    right: 0;
+    @include contact_span(2px,100%,linear-gradient(180deg, transparent, map-get($map: $colors, $key: 'rojo')));
+}
+.span3{
+    bottom: 0;
+    right: -100%;
+    @include contact_span(100%,2px,linear-gradient(270deg, transparent, map-get($map: $colors, $key: 'amarillo')));
+}
+.span4{
+    bottom: -100%;
+    left: 0;
+    @include contact_span(2px,100%,linear-gradient(360deg, transparent, map-get($map: $colors, $key: 'verde')));
+}
 //INDEX
 .index_Presentacion{
-    width: 100vw;
+    width: auto;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(/../assets/images/globos_intro.jpg);
+    background: url(../assets/images/globos_intro.jpg);
     background-size: cover;
     background-position: center;
     flex-direction: column;
     text-align: center;
-}
-//FOOTER
-.bg_Rosado{
-    background-color: map-get($map: $colors, $key: "rosado");
-    color: map-get($map: $colors, $key: 'morado');
-}
-.footer_Img_Logo{
-    border-radius: 50%;
-    width: 20vh;
-    height: 20vh;
 }

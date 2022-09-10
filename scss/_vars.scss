@@ -1,17 +1,23 @@
 // colors
 $colors:(
   'green': hsl(132, 100%, 65%),
+  'darkGreenTrans':hsla(132, 100%, 65%, 0.5),
   'yellow': hsl(38, 100%, 65%),
   'white': hsl(131, 33%, 87%),
   'darkGrey': hsla(127, 8%, 20%, 0.5),
   'grey': hsl(0, 0%, 47%),
-  'blue': hsl(251, 92%, 30%),
+  'azul': hsl(251, 100%, 30%),
+  'rojo': hsl(0, 100%, 30%),
+  'verde': hsl(128, 100%, 30%),
+  'amarillo': hsl(56, 100%, 30%),
   'darkYellow': hsl(38, 56%, 32%),
-  'darkGreenTrans':hsla(132, 100%, 65%, 0.5),
   'black':hsl(120, 100%, 0%),
-  'violeta': hsl(326, 89%, 39%),
+  'violeta': hsl(326, 75%, 44%),
   'morado': hsl(300, 89%, 24%),
+  'moradoTrans': hsla(300, 89%, 24%, 0.5),
   'rosado': hsl(355, 83%, 77%),
+  'rosadoTrans': hsla(355, 82%, 85%, 0.7),
+  
 );
 //breakpoints
 $breakpoints: (
