@@ -25,16 +25,6 @@ h2 {
 .textMorado {
   color: #740774; }
 
-.navLink {
-  text-decoration: none;
-  color: black;
-  margin: 0.4em; }
-
-.navFooter {
-  text-decoration: none;
-  color: #740774;
-  margin: 0.4em; }
-
 .styleNav {
   list-style: none; }
 
@@ -44,6 +34,11 @@ h2 {
 
 .bg_Morado {
   background-color: #740774; }
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin: 0.4em; }
 
 /*RESET*/
 * {
@@ -135,6 +130,21 @@ body {
   flex-direction: column;
   text-align: center; }
 
+.table {
+  width: 80vw; }
+
+#filtroProducto {
+  padding: 10px;
+  border-radius: 10px; }
+
+input[type=search] {
+  width: 20%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out; }
+
+input[type=search]:focus {
+  width: 40%; }
+
 .bg_Rosado {
   background-color: #f5949c;
   color: #740774; }
@@ -146,3 +156,8 @@ body {
 
 .max_width {
   max-width: 100vw; }
+
+.navFooter {
+  text-decoration: none;
+  color: #740774;
+  margin: 0.4em; }

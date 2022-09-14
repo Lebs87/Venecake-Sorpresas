@@ -41,13 +41,3 @@ $text_bold:700;
 .textMorado{
     color: map-get($map: $colors, $key: 'morado');
 }
-.navLink{
-    text-decoration: none;
-    color: map-get($map: $colors, $key: 'black');
-    margin: 0.4em;
-}
-.navFooter{
-    text-decoration: none;
-    color: map-get($map: $colors, $key: 'morado');
-    margin: 0.4em;
-}

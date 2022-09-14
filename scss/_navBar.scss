@@ -8,3 +8,8 @@
 .bg_Morado{
 	background-color: map-get($map: $colors, $key: 'morado')
 }
+.navLink{
+    text-decoration: none;
+    color: map-get($map: $colors, $key: 'black');
+    margin: 0.4em;
+}

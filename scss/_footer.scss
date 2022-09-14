@@ -10,3 +10,8 @@
 .max_width{
     max-width: 100vw;
 }
+.navFooter{
+    text-decoration: none;
+    color: map-get($map: $colors, $key: 'morado');
+    margin: 0.4em;
+}

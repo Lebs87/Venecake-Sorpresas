@@ -88,3 +88,23 @@ body{
     flex-direction: column;
     text-align: center;
 }
+//TIENDA
+.table{
+    width: 80vw;
+}
+#filtroProducto{
+    padding:10px;
+    border-radius: 10px;
+}
+input[type=search] {
+    width: 20%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+input[type=search]:focus {
+    width: 40%;
+}
+
+
+
+
