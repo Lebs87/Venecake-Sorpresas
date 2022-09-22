@@ -11,13 +11,13 @@ class Producto {
 }
 
 //Base de Datos
-function dataBase() {
-	Productos.push(new Producto(955875, "Globo numérico", "5", "rojo", "5000", "5500"))
-	Productos.push(new Producto(955876, "Globo de agua", "4", "verde", "3000", "3630"))
-	Productos.push(new Producto(955877, "Globo payaso", "3", "amarillo", "3500", "4235"))
-    Productos.push(new Producto(955878, "Globo payaso", "3", "azul", "3500", "4235"))
-    Productos.push(new Producto(955879, "Globo payaso", "4", "azul", "4000", "4840"))
-    Productos.push(new Producto(955880, "Globo payaso", "4", "rojo", "4000", "4840"))
-    Productos.push(new Producto(955880, "GLOBO", "4", "rojo", "4000", "4840"))
+const dataBase =()=> {
+	Productos.push(new Producto(955875, "GLOBO NUMERICO", "5", "ROJO", 5000, 5500))
+	Productos.push(new Producto(955876, "GLOBO DE AGUA", "4", "VERDE", 3000, 3630))
+	Productos.push(new Producto(955877, "GLOBO PAYASO", "3", "AMARILLO", 3500, 4235))
+    Productos.push(new Producto(955878, "GLOBO PAYASO", "3", "AZUL", 3500, 4235))
+    Productos.push(new Producto(955879, "GLOBO PAYASO", "4", "AZUL", 4000, 4840))
+    Productos.push(new Producto(955880, "GLOBO PAYASO", "4", "ROJO", 4000, 4840))
+    Productos.push(new Producto(955880, "GLOBO FLOR", "4", "ROJO", 4000, 4840))
 }
 dataBase()
