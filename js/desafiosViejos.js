@@ -1,7 +1,7 @@
 //////////////////// FUNCTIONS EMPLEADAS EN DESAFÍOS ANTERIORES
 
 //Filtrado de los elementos de la dataBase
-function filtrarPorNombre() {
+/* function filtrarPorNombre() {
     let parametro = prompt("Ingresa el nombre a filtrar:")
     let resultado = Productos.filter((Producto)=> Producto.nombre.includes(parametro))
         console.table(resultado)
@@ -23,4 +23,4 @@ function buscarId() {
             console.warn("No se encontró el ID.")
             return "No se encontró el ID."
         }
-}
+} */

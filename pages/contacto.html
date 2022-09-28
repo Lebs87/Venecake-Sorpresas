@@ -21,11 +21,12 @@
   <!--CSS-->
   <link rel="stylesheet" href="../assets/css/style.css">
   <!--WOW-->
-  <link rel="stylesheet" href="../assets/css/animate.css">
+  <!-- <link rel="stylesheet" href="../assets/css/animate.css"> -->
   <!--JS-->
-  <script defer src="../js/variables_const.js"></script>
+  <!-- <script defer src="../js/variables_const.js"></script>
   <script defer src="../js/index.js"></script>
-  <script defer src="../js/dom.js"></script>
+  <script defer src="../js/dom.js"></script> -->
+  <script defer src="../js/localstorage.js"></script>
 </head>
 <body>
 
@@ -86,7 +87,14 @@
 
   <!--INICIA MAIN-->
   <main>
-
+    <h1>Venecake Contácto</h1>
+    <h2>Para solicitudes especiales no dudes en contactarnos</h2>
+    <form class="d-flex align-items-center flex-column">
+      <input type="text" id="inputNombre" placeholder="Luis ..." class="m-1">
+      <input type="email" id="inputEmail" placeholder="venecake@gmail.com" class="m-1">
+      <textarea id="inputComentarios" cols="23" rows="5" placeholder="Comentarios..." class="m-1"></textarea>
+      <button id="btnEnviar" class="btn btn-danger m-1">ENVIAR</button>
+    </form>
   </main>
   <!--TERMINA MAIN-->
 

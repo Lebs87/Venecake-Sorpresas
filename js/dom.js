@@ -10,6 +10,7 @@ const cargarProductos = (param1) => {
                         <td>${Producto.color}</td>
                         <td>${Producto.precio}</td>
                         <td>${Producto.precioFinal}</td>
+                        <td><button id="btn${Producto.id}" class="btn btn-danger">Agregar<button></td>
                     </tr>`
         ListaDeProductos.innerHTML += fila
     })
@@ -47,3 +48,28 @@ const filtrarproductos = ()=>{
                     }   
 }
 inputFiltrar.addEventListener("keyup", filtrarproductos)
+
+
+// EVENTO BOTON DE AGREGAR PRODUCTOS
+
+const eventoBtnAgregar = () => {
+    Productos.forEach(Prod => {
+        const btn = document.querySelector(`#btn${Prod.id}`)
+        btn.addEventListener("click", ()=> console.log("Hiciste click"))
+    })
+}
+eventoBtnAgregar()
+
+// BOTON DE AGREGAR PRODUCTOS
+const agregarAlCarrito =(id)=> {
+    const Producto = Productos.find(Prod => Prod.id == id)
+          Carrito.push(Producto)
+          localStorage.setItem("Carrito", JSON.stringify(Carrito))
+}
+
+function recuperarCarrito() {
+    if (localStorage.getItem("Carrito")) {
+        Carrito = JSON.parse(localStorage.getItem("Carrito"))
+    }
+}
+recuperarCarrito()
