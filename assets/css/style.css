@@ -145,6 +145,19 @@ input[type=search] {
 input[type=search]:focus {
   width: 40%; }
 
+.nosotros_Img_CyG {
+  border-radius: 10%;
+  width: 20em;
+  height: 27em;
+  border-color: rgba(184, 40, 40, 0.432);
+  border-width: 0.4rem;
+  border-style: dashed; }
+
+.nosotros_Img_fondo {
+  background: url(../images/fondoGlobos4.jpg);
+  background-size: cover;
+  background-position: center; }
+
 .bg_Rosado {
   background-color: #f5949c;
   color: #740774; }

@@ -25,7 +25,7 @@ const agregarProducto =() =>{
     let precio = prompt("Ingresa el precio del producto:")
     let precioFinal = Number((precio * IVA).toFixed(2))
     Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal))
-    cargarProductos()    
+    cargarProductos(Producto)    
 }
 
 //EVENTOS JAVASCRIPT////                        BUSCADOR
@@ -36,12 +36,8 @@ const filtrarproductos = ()=>{
     let inputf =inputFiltrar.value.toUpperCase()
     if (inputf !== ""){
                     const Resultado = Productos.filter ((Producto)=> Producto.nombre.includes(inputf))
-                        if (Resultado.length === 0) {
-                        ListaDeProductos.innerHTML=""
-                        }else{
-                            ListaDeProductos.innerHTML=""
-                            cargarProductos (Resultado)
-                        }
+                        Resultado.length === 0 ? ListaDeProductos.innerHTML="" : ListaDeProductos.innerHTML=""
+                        cargarProductos (Resultado)
                     } else {
                         ListaDeProductos.innerHTML=""
                         cargarProductos (Productos)
@@ -61,7 +57,7 @@ const eventoBtnAgregar = () => {
 eventoBtnAgregar()
 
 // BOTON DE AGREGAR PRODUCTOS
-const agregarAlCarrito =(id)=> {
+/* const agregarAlCarrito =(id)=> {
     const Producto = Productos.find(Prod => Prod.id == id)
           Carrito.push(Producto)
           localStorage.setItem("Carrito", JSON.stringify(Carrito))
@@ -72,4 +68,4 @@ function recuperarCarrito() {
         Carrito = JSON.parse(localStorage.getItem("Carrito"))
     }
 }
-recuperarCarrito()
+recuperarCarrito() */
