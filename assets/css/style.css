@@ -158,6 +158,9 @@ input[type=search]:focus {
   background-size: cover;
   background-position: center; }
 
+.agregarProd_main {
+  min-height: 100vh; }
+
 .bg_Rosado {
   background-color: #f5949c;
   color: #740774; }

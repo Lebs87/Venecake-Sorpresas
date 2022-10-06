@@ -17,16 +17,18 @@ const cargarProductos = (param1) => {
 }
 cargarProductos(Productos)
 
-const agregarProducto =() =>{
+// AGREGAR PRODUCTOS 
+/* const agregarProducto =() =>{
     let id = NUEVOID()
-    let nombre = prompt("Ingresa la descripción del producto:")
-    let medida = prompt("Ingresa la medida del producto:")
-    let color = prompt("Ingresa el color del producto:")    
+    let nombre = prompt("Ingresa la descripción del producto:").toUpperCase()
+    let medida = prompt("Ingresa la medida del producto:").toUpperCase()
+    let color = prompt("Ingresa el color del producto:").toUpperCase()  
     let precio = prompt("Ingresa el precio del producto:")
     let precioFinal = Number((precio * IVA).toFixed(2))
     Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal))
-    cargarProductos(Producto)    
-}
+    ListaDeProductos.innerHTML=""
+    cargarProductos(Productos)    
+} */
 
 //EVENTOS JAVASCRIPT////                        BUSCADOR
 
@@ -43,29 +45,64 @@ const filtrarproductos = ()=>{
                         cargarProductos (Productos)
                     }   
 }
-inputFiltrar.addEventListener("keyup", filtrarproductos)
+inputFiltrar.addEventListener("input", filtrarproductos)
 
+//LIBRERIA  sweetalert2
+const Bienvenida = ()=> {
+    Swal.fire({
+        toast: true,
+        title: 'Producto agregado al carrito',
+        timer: 2500,
+        position: 'start',
+        timerProgressBar: true,
+        showConfirmButton: false,
+        background:  'green',
+        color: 'white'
+    })
+}
 
 // EVENTO BOTON DE AGREGAR PRODUCTOS
 
 const eventoBtnAgregar = () => {
     Productos.forEach(Prod => {
         const btn = document.querySelector(`#btn${Prod.id}`)
-        btn.addEventListener("click", ()=> console.log("Hiciste click"))
+        btn.addEventListener("click", ()=> Bienvenida())
     })
 }
 eventoBtnAgregar()
 
 // BOTON DE AGREGAR PRODUCTOS
-/* const agregarAlCarrito =(id)=> {
+const agregarAlCarrito =(id)=> {
     const Producto = Productos.find(Prod => Prod.id == id)
           Carrito.push(Producto)
           localStorage.setItem("Carrito", JSON.stringify(Carrito))
 }
 
-function recuperarCarrito() {
-    if (localStorage.getItem("Carrito")) {
-        Carrito = JSON.parse(localStorage.getItem("Carrito"))
-    }
+function recuperoCarrito() {
+    //debugger
+    let carrito = JSON.parse(localStorage.getItem("carrito"))
+    let tabla = document.querySelector("tbody")
+        carrito.forEach(prod => {
+            let fila = `<tr>
+                            <td>${prod.nombre}</td>
+                            <td>$ ${prod.importe}</td>
+                        </tr>`
+                        tabla.innerHTML += fila
+        });
 }
-recuperarCarrito() */
+recuperoCarrito()
+
+// ORDENAR PRODUCTOS
+
+const ordenarAfabeticamente = () => {
+    Productos.sort((a,b)=>{
+        if (a.nombre > b.nombre) {
+            return 1
+        }
+        if (a.nombre < b.nombre) {
+            return -1
+        }
+        return 0
+    })
+    console.table(Productos)
+}
