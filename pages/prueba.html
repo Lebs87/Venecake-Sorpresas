@@ -95,11 +95,21 @@
         <p class="px-3">Buscar:</p>
         <input type="search" id="filtroProducto" placeholder="Globo...">
       </article>
-      <article id="listaDeProductos">
-        <div class="">
-          <p class="text-center">La información se está cargando</p>
-          <img src="../assets/images/cargandoDataBase.gif" alt="Esperando a que cargue la página">
-        </div>
+      <article class="d-flex justify-content-center">
+        <table class="table">
+          <thead>
+            <tr class="table-danger">
+              <th scope="col">ID</th>
+              <th scope="col">NOMBRE</th>
+              <th scope="col">MEDIDA</th>
+              <th scope="col">COLOR</th>
+              <th scope="col">PRECIO</th>
+              <th scope="col">PRECIO + IVA</th>
+              <th scope="col">AGREGAR</th>
+            </tr>
+          </thead>
+          <tbody id="listaDeProductos"></tbody>
+        </table>
       </article>
       <article class="p-5">
         <button onclick="dataBase()" class="btn btn-danger">LISTAR PRODUCTOS</button>

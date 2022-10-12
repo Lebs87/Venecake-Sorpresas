@@ -60,6 +60,8 @@ let DESC = -35000 || 0 */
 } */
 
 
+///////////////////////          BORRAR EL CARRITO
+/* localStorage.setItem("products", []) o localStorage.removeItem("products") y tamo chelo */
 
 
 
@@ -135,4 +137,25 @@ recuperarCarrito() */
     } else {
         return false
     }
+} */
+
+
+//////////////////TEMPORIZADOR/////////////////////////////////////////////////
+/* const token = document.querySelector("h2")
+const progress = document.querySelector("progress")
+  let intervalo = 0
+      progress.value = 0
+
+token.textContent = parseInt(Math.random() * 1_000_000)
+
+const intervaloToken = setInterval(() => {
+                          intervalo > 30 && tokenReset()
+                          progress.value = intervalo
+                          intervalo++
+                        }, 1000); //mil milisegundos = 1 segundo
+
+const tokenReset = ()=> {
+  clearInterval(intervaloToken)
+  intervalo = 0
+  location.reload()
 } */
