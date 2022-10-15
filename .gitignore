@@ -1,5 +1,5 @@
 node_modules/
-desafiosViejos/
+*desafiosViejos.js/
 imgSinUsar/
-prueba/
-app/
+*prueba.html/
+*app.js/
