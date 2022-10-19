@@ -3,11 +3,6 @@ const carrito = []
 let vinos = []
 let contenidoHTML = ""
 
-
-
-
-
-
 const activarClicks = ()=> {
     let botones = document.querySelectorAll("button.card-button")
         botones.forEach(boton => boton.addEventListener("click", (e)=> agregarAlCarrito(e)))

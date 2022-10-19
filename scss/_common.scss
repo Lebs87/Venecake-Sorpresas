@@ -125,4 +125,8 @@ input[type=search]:focus {
 .agregarProd_main{
     min-height: 100vh;
 }
-
+//CONTACTO
+.form-control:focus {
+    border-color:  map-get($map: $colors, $key: 'violeta')!important;
+    box-shadow: 0 0 5px  map-get($map: $colors, $key: 'violeta') !important;
+}
