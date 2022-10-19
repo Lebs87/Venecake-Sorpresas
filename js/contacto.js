@@ -8,7 +8,7 @@ const eventoContacto = () => {
     background: '#fff url(../assets/images/fondoBtnContacto.jpg)',
     backdrop: `
       rgba(0,0,123,0.4)
-      url("../assets/images/imgSinUsar/confetti-50.webp")
+      url("../assets/images/confetti.webp")
       left top
       repeat
     `
