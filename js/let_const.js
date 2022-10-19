@@ -1,17 +1,20 @@
 // ARRAYS DEL PROYECTO
+    // TIENDA.JS
 const Productos = [] //ELIMINAR
 const Carrito = []
 let globos = []
 
-//VARIABLES 
+// VARIABLES 
+    // TIENDA.JS
 let documentoModelos = ""
 
-//CONSTANTES DE LOS PRODUCTOS PUBLICADOS
+//CONSTANTES
+    // TIENDA.JS
 const NUEVOID = ()=> parseInt(Math.random() * 1000000)
 const IVA = 1.21
 const URL = "../dataBase/globos.json"
 
-//CONSTANTES DE CONTACTOS
+    // CONTACTO.JS
 const nombreContacto = localStorage.getItem("nombre")
 const apellidoContacto = localStorage.getItem("apellido")
 const emailContacto = localStorage.getItem("email")

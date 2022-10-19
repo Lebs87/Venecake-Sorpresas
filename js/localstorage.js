@@ -1,4 +1,5 @@
-function eliminarDatos(){
+// DOC CONTACTO ____ ELIMINAR DATOS DE LOCALSTORE
+const eliminarDatos = () =>{
     event.preventDefault()
     localStorage.removeItem("nombre",inputNombre.value)
     localStorage.removeItem("apellido",inputApellido.value)
@@ -13,7 +14,8 @@ function eliminarDatos(){
 }
 btnEnviar.addEventListener("click",eliminarDatos)
 
-function guardarDatos(){
+// DOC CONTACTO ____ GUARDAR DATOS EN LOCALSTORE
+const guardarDatos = () =>{
 localStorage.setItem("nombre",inputNombre.value)
 localStorage.setItem("apellido",inputApellido.value)
 localStorage.setItem("email",inputEmail.value)
@@ -26,7 +28,8 @@ inputEmail.addEventListener("input",guardarDatos)
 inputDate.addEventListener("input",guardarDatos)
 inputComentarios.addEventListener("input",guardarDatos)
 
-function recuperarDatos() {
+// DOC CONTACTO ____ RECUPERAR DATOS EN LOCALSTORE
+const recuperarDatos = () =>{
     nombreContacto == null ? inputNombre.value = "Prueba1" : inputNombre.value = localStorage.getItem("nombre") 
     apellidoContacto == null ? inputApellido.value = "Prueba2" : inputApellido.value = localStorage.getItem("apellido") 
     emailContacto == null ? inputEmail.value = "3email@gmail.com" : inputEmail.value = localStorage.getItem("email")
