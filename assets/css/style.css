@@ -145,9 +145,6 @@ input[type=search] {
 input[type=search]:focus {
   width: 40%; }
 
-.errorDeCarga {
-  width: 30vw; }
-
 .nosotros_Img_CyG {
   border-radius: 10%;
   width: 20em;
@@ -167,6 +164,60 @@ input[type=search]:focus {
 .form-control:focus {
   border-color: #c41c7b !important;
   box-shadow: 0 0 5px #c41c7b !important; }
+
+.imgGaleria {
+  width: 100%;
+  height: auto; }
+
+.galeria_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em; }
+
+.errorDeCarga {
+  width: 30vw; }
+
+.ubicacion_galeria {
+  position: relative; }
+
+.ubicacion_img {
+  line-height: 0;
+  overflow: hidden; }
+
+.ubicacion_img .imgGaleria {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1); }
+
+.ubicacion_titulos {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(92, 0, 11, 0.4);
+  color: #d3e9d7;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.ubicacion_galeria:hover .ubicacion_titulos {
+  opacity: 1; }
+
+.ubicacion_galeria:hover .ubicacion_img .imgGaleria {
+  filter: blur(2px); }
+
+@media (hover: none) {
+  .ubicacion_titulos {
+    opacity: 1; }
+  .ubicacion_img .imgGaleria {
+    filter: blur(2px); } }
 
 .bg_Rosado {
   background-color: #f5949c;

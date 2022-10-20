@@ -8,6 +8,11 @@ const enviarNewsLetter = document.querySelector(`#btnNewsletter`)
     //DOC HTML TIENDA
 const ListaDeProductos = document.querySelector("#listaDeProductos")
 
+    //DOC HTML GALERIA
+const galeriaBouquets = document.querySelector("#galeria_section_bouquets")
+const galeriaParedes = document.querySelector("#galeria_section_paredes")
+const galeriaGuirnaldas = document.querySelector("#galeria_section_guirnaldas")
+
     //DOC HTML AGREGARPROD
 const inputNombreProd = document.querySelector("#inputNombreProd")
 const inputMedida = document.querySelector("#inputMedida")

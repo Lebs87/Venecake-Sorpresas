@@ -6,13 +6,15 @@ let globos = []
 
 // VARIABLES 
     // TIENDA.JS
-let documentoModelos = ""
+let documentoBouquets = ""
+let documentoParedes = ""
+let documentoGuirnaldas = ""
 
 //CONSTANTES
     // TIENDA.JS
 const NUEVOID = ()=> parseInt(Math.random() * 1000000)
 const IVA = 1.21
-const URL = "../dataBase/globos.json"
+const URL = "../dataBase/galeria.json"
 
     // CONTACTO.JS
 const nombreContacto = localStorage.getItem("nombre")

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,9 +25,11 @@
   <script src="../js/let_const.js"></script>
   <script defer src="../js/dom.js"></script>
   <script defer src="../js/general.js"></script>
+  <script defer src="../js/galeria.js"></script>
   <!--SWEETALERT2-->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
   <!--INICIA NAV-->
@@ -43,7 +46,8 @@
             <a class="nav-link active" aria-current="page" href="./tienda.html">Tienda</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Servicios</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Bouquets</a></li>
               <li>
@@ -61,15 +65,15 @@
               Galería
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Bouquets</a></li>
+              <li><a class="dropdown-item" href="./galeria.html#bouquets">Bouquets</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Paredes</a></li>
+              <li><a class="dropdown-item" href="./galeria.html#paredes">Paredes</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Guirnaldas</a></li>
+              <li><a class="dropdown-item" href="./galeria.html#guirnaldas">Guirnaldas</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -85,17 +89,90 @@
   <!--TERMINA NAV-->
 
   <!--INICIA MAIN-->
-  <main>
-
+  <main class="container">
+    <h1 class="m-5 text-center">Vení a ver parte de nuestras mágicas creaciones</h1>
+    <h2 id="bouquets">Bouquets</h2>
+    <section class="m-3">
+    <div class="galeria_grid" id="galeria_section_bouquets">
+      <article id="3685" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          San Francisco </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/san-fransisco-768x432.jpg"
+              alt="san francisco"> </a>
+        </div>
+      </article>
+      <article id="3688" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          London </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london"> </a>
+        </div>
+      </article>
+      <article id="3691" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          New York </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/new-york-768x432.jpg" alt="new york"> </a>
+        </div>
+      </article>
+      <article id="3694" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          Cape Town </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cape-town-768x432.jpg" alt="cape town"> </a>
+        </div>
+      </article>
+      <article id="3697" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          Beijing </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/beijing-768x432.jpg" alt="beijing"> </a>
+        </div>
+      </article>
+      <article id="3700" class="ubicacion_galeria">
+        <a class="ubicacion_titulos" href="#">
+          Paris </a>
+        <div class="ubicacion_img">
+          <a href="#">
+            <img class="imgGaleria" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/paris-768x432.jpg" alt="paris">
+          </a>
+        </div>
+      </article>
+    </div>
+    </section>
+    <h2 id="paredes">Paredes</h2>
+    <section class="m-3">
+      <div class="galeria_grid" id="galeria_section_paredes">
+        <div class="text-center">
+          <p>La información se está cargando</p>
+          <img src="../assets/images/cargandoDataBase.gif" alt="Esperando a que cargue la página">
+        </div>
+      </div>
+    </section>
+    <h2 id="guirnaldas">Guirnaldas</h2>
+    <section class="m-3">
+      <div class="galeria_grid" id="galeria_section_guirnaldas">
+        <div class="text-center">
+          <p>La información se está cargando</p>
+          <img src="../assets/images/cargandoDataBase.gif" alt="Esperando a que cargue la página">
+        </div>
+      </div>
+    </section>
   </main>
   <!--TERMINA MAIN-->
-
 
   <!--INICIA FOOTER-->
   <footer class="container texcenter max_width">
     <section class="px-4 py-2 row row-cols-1 row-cols-md-4 bg_Rosado">
       <article class="col p-3 text-center d-flex align-items-center flex-column">
-        <img src="../assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas" class="footer_Img_Logo py-2">
+        <img src="../assets/images/Logo VenecakeSorpresas.jpeg" alt="Logo de Venecake Sorpresas"
+          class="footer_Img_Logo py-2">
         <p>Venecake Sorpresas</p>
         <p>¡Decoraciones de Globos para cualquier ocasión!</p>
       </article>
@@ -134,10 +211,12 @@
       </article>
       <article class="col p-3">
         <h3>Suscribíte</h3>
-        <p>¡Suscríbite a nuestro correo de noticias para que te mantengas informado de nuestras promociones y ofertas!</p>
+        <p>¡Suscríbite a nuestro correo de noticias para que te mantengas informado de nuestras promociones y ofertas!
+        </p>
         <form class="">
           <div class="form">
-            <input type="email" class="form-control" id="newsletter" placeholder="venecake@gmail.com" value="prueba@gmail.com">
+            <input type="email" class="form-control" id="newsletter" placeholder="venecake@gmail.com"
+              value="prueba@gmail.com">
             <label for="newsletter"></label>
           </div>
           <button id="btnNewsletter" type="button" class="btn-neon">
@@ -146,17 +225,19 @@
             <span class="span3"></span>
             <span class="span4"></span>
             Enviar
-        </button>
+          </button>
         </form>
       </article>
     </section>
     <section class="d-flex justify-content-center align-items-center my-3">
       <div class="mx-3">
-        <img src="../assets/images/coracaozinho-para-o-luiz-otavio.svg" width="35" height="35" alt="Pequeño Corazón" >
+        <img src="../assets/images/coracaozinho-para-o-luiz-otavio.svg" width="35" height="35" alt="Pequeño Corazón">
       </div>
-      <p class="footerP">2022 <a href="https://lebs87.github.io/Portfolio_Belisario_SASS/" target="blank">Luis Belisario. Web Developer.</a></p>
-  </section>
+      <p class="footerP">2022 <a href="https://lebs87.github.io/Portfolio_Belisario_SASS/" target="blank">Luis
+          Belisario. Web Developer.</a></p>
+    </section>
   </footer>
   <!--TERMINA FOOTER-->
 </body>
+
 </html>

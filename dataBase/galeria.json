@@ -1,0 +1,50 @@
+[
+    {
+    "id": 1,
+    "categoria": "Bouquets",
+    "nombre": "Bouquet azul",
+    "imagen": "bouquetAzul.webp",
+    "ruta": "#",
+    "descripcion": "Hermoso Bouquet azul"
+    },
+    {
+    "id": 2,
+    "categoria": "Pared",
+    "nombre": "Pared azul",
+    "ruta": "#",
+    "imagen": "paredAzul.jpg",
+    "descripcion": "Hermosa Pared azul"
+    },
+    {
+    "id": 3,
+    "categoria": "Guirnaldas",
+    "nombre": "Guirnalda azul",
+    "ruta": "#",
+    "imagen": "guirnaldaAzul.jpg",
+    "descripcion": "Hermosa Guirnalda azul"
+    },
+        {
+    "id": 4,
+    "categoria": "Bouquets",
+    "nombre": "Bouquet rojo",
+    "ruta": "#",
+    "imagen": "bouquetAzul.webp",
+    "descripcion": "Hermoso Bouquet rojo"
+    },
+    {
+    "id": 5,
+    "categoria": "Pared",
+    "nombre": "Pared rojo",
+    "ruta": "#",
+    "imagen": "paredAzul.jpg",
+    "descripcion": "Hermosa Pared rojo"
+    },
+    {
+    "id": 6,
+    "categoria": "Guirnaldas",
+    "nombre": "Guirnalda rojo",
+    "ruta": "#",
+    "imagen": "guirnaldaAzul.jpg",
+    "descripcion": "Hermosa Guirnalda rojo"
+    }
+]

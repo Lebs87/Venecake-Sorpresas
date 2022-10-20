@@ -1,51 +1,7 @@
 // funciones
-const mostrarError = ()=> {
-    return `<div class="card d-flex align-items-center">
-                <h2>¡Ups... lo sentimos!</h2>
-                <img class="errorDeCarga" src="../assets/images/errorCargaData.png">
-                <p>No pudimos cargar la información.</p>
-                <p>Por favor, intenta nuevamente en unos minutos.</p>
-            </div>`
-}
-
-const mostrarCard = (contenido)=> {
-    const {id, nombre, precio, precioFinal, imagen, descripcion, medida} = contenido
-    return `<div class="card">
-                <img id="${id}" class="errorDeCarga" src="../assets/images/${imagen}" title="${nombre}" alt="${descripcion}">
-                <div>
-                <p title="${nombre}">${nombre} - ${medida}</p>
-                <p >${precio}</p>
-                <p >${precioFinal}</p>
-                </div>
-                <div class="align-btn">
-                    <button class="btn btn-danger m-1" id="${id}">AGREGAR</button>
-                </div>
-            </div>`
-}
-
-const cargarContenido = async () => {
-    try {
-        const response = await fetch(URL)
-        const data = await response.json()
-        globos = data
-        globos.forEach(param => documentoModelos += mostrarCard(param))
-    }
-    catch (error) {
-        documentoModelos += mostrarError()
-    }
-    finally {
-        ListaDeProductos.innerHTML = documentoModelos
-    }
-}
-
-document.addEventListener("DOMContentLoaded", async ()=> {
-    const espero = await cargarContenido()
-          //activarClicks()
-          console.log("Hola Hola Perinola")
-})
 
 // Clase constructora de producto
-/* class Producto {
+class Producto {
     constructor(id, nombre, medida, color, precio, precioFinal) {
         this.id = id
         this.nombre = nombre
@@ -54,10 +10,10 @@ document.addEventListener("DOMContentLoaded", async ()=> {
         this.precio = "$ " + precio
         this.precioFinal = "$ " + precioFinal
     }
-} */
+}
 
 //Base de Datos
-/* const dataBase =()=> {
+const dataBase =()=> {
 	Productos.push(new Producto(955875, "GLOBO NUMERICO", "5", "ROJO", 5000, 5500))
 	Productos.push(new Producto(955876, "GLOBO DE AGUA", "4", "VERDE", 3000, 3630))
 	Productos.push(new Producto(955877, "GLOBO PAYASO", "3", "AMARILLO", 3500, 4235))
@@ -66,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async ()=> {
     Productos.push(new Producto(955880, "GLOBO PAYASO", "4", "ROJO", 4000, 4840))
     Productos.push(new Producto(955880, "GLOBO FLOR", "4", "ROJO", 4000, 4840))
 }
-dataBase() */
+dataBase()
 
 const cargarProductos = (param1) => {
     let fila = ""
