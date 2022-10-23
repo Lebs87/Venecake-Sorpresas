@@ -20,21 +20,23 @@
   <link rel="shortcut icon" href="../assets/images/Logo VenecakeSorpresas.jpeg" type="image/x-icon">
   <!--CSS-->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <!--GOOGLEFONTS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <!--JS-->
   <script src="../js/let_const.js"></script>
+  <script src="../js/BDDTienda.js"></script>
   <script defer src="../js/dom.js"></script>
   <script defer src="../js/general.js"></script>
   <script defer src="../js/tienda.js"></script>
-  <script defer src="../js/agregarProd.js"></script>
   <!--SWEETALERT2-->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
   <!--INICIA NAV-->
-  <nav class="navbar sticky-top navbar-expand-lg bg_Violeta">
+  <nav class="navbar sticky-top navbar-expand-lg navDegradado">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">VenecakeSorpresas</a>
+      <a class="navbar-brand" href="../index.html"><b class="nav_text_venecake">VenecakeSorpresas</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,10 +44,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Tienda</a>
+            <a class="nav-link nav_text" aria-current="page" href="#"><b>Tienda</b></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+            <a class="nav-link dropdown-toggle nav_text" href="./servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Bouquets</a></li>
               <li>
@@ -59,7 +61,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./galeria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle nav_text" href="./galeria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Galería
             </a>
             <ul class="dropdown-menu">
@@ -75,32 +77,35 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            <a class="nav-link nav_text" href="./nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contacto.html">Contacto</a>
+            <a class="nav-link nav_text" href="./contacto.html">Contacto</a>
           </li>
         </ul>
+        <a href="carrito.html" class="index_heder_img px-1">
+          <span class="carrito material-symbols-outlined" alt="Carrito de compras">shopping_cart</span>
+        </a>
       </div>
     </div>
   </nav>
   <!--TERMINA NAV-->
 
   <!--INICIA MAIN-->
-  <main class="p-2">
+  <main class="container p-2">
     <h1>Productos</h1>
     <h3>Listado de productos y arreglos:</h3>
     <section class="text-center">
       <article class="d-flex justify-content-center align-items-center p-3">
         <p class="px-3">Buscar:</p>
         <input type="search" id="filtroProducto" placeholder="Globo...">
+        <button id="aZ" class="btn btn-danger px-3 mx-3">A - Z</button>
+        <button id="zA" class="btn btn-danger px-3 mx-3">Z - A</p></button>
       </article>
-      <article id="listaDeProductos">
+      <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="listaDeProductos">
       </article>
       <article class="p-5">
-        <button onclick="dataBase()" class="btn btn-danger">LISTAR PRODUCTOS</button>
-        <button onclick="agregarProducto()" class="btn btn-danger">AGREGAR PRODUCTO</button>
-      </footer>
+        <button id="agregarProd" class="btn btn-danger">AGREGAR PRODUCTO</button>
       </article>
   </main>
   <!--TERMINA MAIN-->

@@ -1,11 +1,10 @@
 // ARRAYS DEL PROYECTO
     // TIENDA.JS
-const Productos = [] //ELIMINAR
-const Carrito = []
-let globos = []
+const Productos = []
+let carritos = []
 
 // VARIABLES 
-    // TIENDA.JS
+    // GALERIA.JS
 let documentoBouquets = ""
 let documentoParedes = ""
 let documentoGuirnaldas = ""
@@ -14,8 +13,8 @@ let documentoGuirnaldas = ""
     // TIENDA.JS
 const NUEVOID = ()=> parseInt(Math.random() * 1000000)
 const IVA = 1.21
+    // GALERIA.JS
 const URL = "../dataBase/galeria.json"
-
     // CONTACTO.JS
 const nombreContacto = localStorage.getItem("nombre")
 const apellidoContacto = localStorage.getItem("apellido")

@@ -21,6 +21,8 @@
   <link rel="shortcut icon" href="../assets/images/Logo VenecakeSorpresas.jpeg" type="image/x-icon">
   <!--CSS-->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <!--GOOGLEFONTS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <!--JS-->
   <script src="../js/let_const.js"></script>
   <script defer src="../js/dom.js"></script>
@@ -33,9 +35,9 @@
 <body>
 
   <!--INICIA NAV-->
-  <nav class="navbar sticky-top navbar-expand-lg bg_Violeta">
+  <nav class="navbar sticky-top navbar-expand-lg navDegradado">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">VenecakeSorpresas</a>
+      <a class="navbar-brand" href="../index.html"><b class="nav_text_venecake">VenecakeSorpresas</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,10 +45,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./tienda.html">Tienda</a>
+            <a class="nav-link nav_text" aria-current="page" href="./tienda.html">Tienda</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link dropdown-toggle nav_text" href="./servicios.html" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">Servicios</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Bouquets</a></li>
@@ -61,8 +63,8 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Galería
+            <a class="nav-link dropdown-toggle nav_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <b>Galería</b>
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./galeria.html#bouquets">Bouquets</a></li>
@@ -77,12 +79,15 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            <a class="nav-link nav_text" href="./nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contacto.html">Contacto</a>
+            <a class="nav-link nav_text" href="./contacto.html">Contacto</a>
           </li>
         </ul>
+        <a href="carrito.html" class="index_heder_img px-1">
+          <span class="carrito material-symbols-outlined" alt="Carrito de compras">shopping_cart</span>
+        </a>
       </div>
     </div>
   </nav>

@@ -15,7 +15,7 @@ inputs.forEach(input => {
 }) */
 
 
-const btnAgregarProd = document.querySelector("#btnAgregar")
+/* const btnAgregarProd = document.querySelector("#btnAgregar")
 
 
 const agregarProducto =() =>{
@@ -26,12 +26,12 @@ const agregarProducto =() =>{
     let color = inputColor.value.toUpperCase() 
     let precio = inputPrecio.value.toUpperCase()
     let precioFinal = Number((precio * IVA).toFixed(2))
-    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal))
+    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal)) */
     //ListaDeProductos.innerHTML=""
-    cargarProductos(Productos)
+/*     cargarProductos(Productos)
     console.table(Productos)
 }
-btnAgregarProd.addEventListener("click", ()=> agregarProducto)
+btnAgregarProd.addEventListener("click", ()=> agregarProducto) */
 /* const form = document.querySelector("form")
 
 form.addEventListener("submit", (e)=> {

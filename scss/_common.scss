@@ -7,6 +7,9 @@
 //GENERAL
 body{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .logoVenecakeSorpresas{
     width: 20vw;
@@ -75,6 +78,51 @@ body{
     left: 0;
     @include contact_span(2px,100%,linear-gradient(360deg, transparent, map-get($map: $colors, $key: 'verde')));
 }
+.carrito,
+.nav_text{
+    color: map-get($map: $colors, $key: 'white');
+    &:hover{
+        color: map-get($map: $colors, $key: 'moradoOsc');
+    }
+}
+.nav_text_venecake{
+    color: map-get($map: $colors, $key: 'moradoOsc');
+    &:hover{
+        color: map-get($map: $colors, $key: 'white');
+    }
+}
+.navDegradado{
+    background-color: map-get($map: $colors, $key: 'arcoiris1'); 
+    background-image: linear-gradient(
+        45deg,
+        map-get($map: $colors, $key: 'arcoiris1'), 
+        map-get($map: $colors, $key: 'arcoiris2'), 
+        map-get($map: $colors, $key: 'arcoiris3'), 
+        map-get($map: $colors, $key: 'arcoiris4'), 
+        map-get($map: $colors, $key: 'arcoiris5'), 
+        map-get($map: $colors, $key: 'arcoiris6'), 
+        map-get($map: $colors, $key: 'arcoiris7'), 
+        map-get($map: $colors, $key: 'arcoiris8'), 
+        map-get($map: $colors, $key: 'arcoiris9'), 
+        map-get($map: $colors, $key: 'arcoiris10'),);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text; 
+    animation: rainbow-text-simple-animation-rev 1s ease forwards;
+        &:hover{
+            animation: rainbow-text-simple-animation 0.75s ease-in forwards;
+        }
+}  
+@keyframes rainbow-text-simple-animation-rev {
+    0% {background-size: 650%;}
+    40% {background-size: 650%;}
+    100% {background-size: 100%;}
+}
+@keyframes rainbow-text-simple-animation {
+    0% {background-size: 100%;}
+    80% {background-size: 650%;}
+    100% {background-size: 650%;}
+}
 //INDEX
 .index_Presentacion{
     width: auto;
@@ -87,6 +135,9 @@ body{
     background-position: center;
     flex-direction: column;
     text-align: center;
+}
+.index_heder_img{
+    text-decoration:none;
 }
 //TIENDA
 .table{
@@ -103,6 +154,16 @@ input[type=search] {
 }
 input[type=search]:focus {
     width: 40%;
+}
+.demandaEstilos{
+    background-color: red;
+    border-radius: 100%;
+    color: white;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 //NOSOTROS
 .nosotros_Img_CyG{
@@ -185,4 +246,38 @@ input[type=search]:focus {
   .ubicacion_img .imgGaleria{
     filter: blur(2px);
   }
+}
+//CARRITO
+input[type="number"]{
+    text-align: end;
+    font-size: 1em;
+    border: none;
+    background-color: map-get($map: $colors, $key: 'blancoPuro');
+    color: map-get($map: $colors, $key: 'moradoOsc');
+    padding-right: 0.2em;
+}
+.cantidad{
+    background-color: map-get($map: $colors, $key: 'violeta');
+    border-radius: 45px;
+    box-shadow: 0em 0.5em 0.7em map-get($map: $colors, $key: 'moradoOsc');
+    font-size: 0.8em;
+    width: 8em;
+}
+.imagenCarrito{
+    max-width: 50%;
+}
+#disminuir,
+#aumentar{
+    color: map-get($map: $colors, $key: 'moradoOsc');
+    background-color: map-get($map: $colors, $key: 'blancoPuro');
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    padding: 0.2em 0.1em 0.2em 0.3em;
+}
+#disminuir{
+    border-radius: 45px 0 0 45px;
+}
+#aumentar{
+    border-radius: 0 45px 45px 0;
 }

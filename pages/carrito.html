@@ -26,7 +26,7 @@
   <script src="../js/let_const.js"></script>
   <script defer src="../js/dom.js"></script>
   <script defer src="../js/general.js"></script>
-  <script defer src="../js/contacto.js"></script>
+  <script defer src="../js/carrito.js"></script>
   <!--SWEETALERT2-->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -79,11 +79,11 @@
             <a class="nav-link nav_text" href="./nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav_text" href="#"><b>Contacto</b></a>
+            <a class="nav-link nav_text" href="./contacto.html">Contacto</a>
           </li>
         </ul>
-        <a href="carrito.html" class="index_heder_img px-1">
-          <span class="carrito material-symbols-outlined" alt="Carrito de compras">shopping_cart</span>
+        <a href="#" class="index_heder_img px-1 position-relative">
+            <span class="carrito material-symbols-outlined" alt="Carrito de compras">shopping_cart</span><span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2">1<span class="visually-hidden">unread messages</span></span>
         </a>
       </div>
     </div>
@@ -91,40 +91,17 @@
   <!--TERMINA NAV-->
 
   <!--INICIA MAIN-->
-  <main>
-    <h1 class="m-5">Venecake Contácto</h1>
-    <h2 class="m-5">Para solicitudes especiales no dudes en contactarnos</h2>
-    <form class="container text-center">
-      <div class="input-group my-4 mx-2">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Nombre y Apellido</span>
-        <input type="text" id="inputNombre" placeholder="Luis ..." class="form-control">
-        <input type="text" id="inputApellido" placeholder="Vera ..." class="form-control">
-      </div>
-      <div class="input-group my-4 mx-2">
-        <input type="email" id="inputEmail" placeholder="venecake@gmail.com" class="form-control" aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">@ejemplo.com</span>
-      </div>
-      <div class="input-group my-4 mx-2">
-        <span class="input-group-text">Comentarios</span>
-        <textarea class="form-control" id="inputComentarios" cols="15" rows="1" placeholder="Saludos, me gustaría..."></textarea>
-      </div>
-      <div class="input-group my-4 mx-2">
-        <input type="date" id="inputDate" placeholder="10/12/2020" class="form-control">
-        <span class="input-group-text" id="basic-addon2">Fecha del Evento</span>
-      </div>
-      <button id="btnEnviar" type="button" class="btn-neon mt-1 mb-5">
-        <span class="span1"></span>
-        <span class="span2"></span>
-        <span class="span3"></span>
-        <span class="span4"></span>
-        Solicitar
-      </button>
-      <!-- id="btnNewsletter"   -->
-    </form>
+  <main class="container">
+    <h1>Carrito de Sorpresas:</h1>
+    <section class="text-center" id="areaCarrito">
+    </section>
+    <article id="total" class="p-3 d-flex justify-content-end">
+    </article>
+    <article id="btn_comprar" class="p-3 d-flex justify-content-end">
+    </article>
   </main>
   <!--TERMINA MAIN-->
 
-  
   <!--INICIA FOOTER-->
   <footer class="container texcenter max_width">
     <section class="px-4 py-2 row row-cols-1 row-cols-md-4 bg_Rosado">
@@ -146,13 +123,13 @@
             <a href="./servicios.html" class="navFooter fs-6">Servicios</a>
           </li>
           <li>
-            <a href="./tienda.html" class="navFooter fs-6">Tienda</a>
+            <a href="#" class="navFooter fs-6">Tienda</a>
           </li>
           <li>
             <a href="./nosotros.html" class="navFooter fs-6">Nosotros</a>
           </li>
           <li>
-            <a href="#" class="navFooter fs-6">Contacto</a>
+            <a href="./contacto.html" class="navFooter fs-6">Contacto</a>
           </li>
         </ul>
       </article>

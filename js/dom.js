@@ -3,10 +3,21 @@
 // CONSTANTES QUE TRABAJAN CON EL DOM
     //DOC HTML EN GENERAL
 const inputNewsletter = document.querySelector("#newsletter")
-const enviarNewsLetter = document.querySelector(`#btnNewsletter`)
+const enviarNewsLetter = document.querySelector("#btnNewsletter")
 
     //DOC HTML TIENDA
 const ListaDeProductos = document.querySelector("#listaDeProductos")
+const inputFiltrar = document.querySelector("#filtroProducto")
+const btnAgregarProd = document.querySelector("#agregarProd")
+const btnAZ = document.querySelector("#aZ")
+const btnZA = document.querySelector("#zA")
+    //DOC HTML CARRITO
+const cantidadProducto = document.querySelector("#inputCantidad")
+const btnDisminuir = document.querySelector("#disminuir")
+const btnAumentar = document.querySelector("#aumentar")
+const listaDeCarrito = document.querySelector("#areaCarrito")
+const datosTotales = document.querySelector("#total")
+const btnComprar = document.querySelector("#btn_comprar")
 
     //DOC HTML GALERIA
 const galeriaBouquets = document.querySelector("#galeria_section_bouquets")

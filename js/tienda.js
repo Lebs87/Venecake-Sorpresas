@@ -1,63 +1,37 @@
-// funciones
-
-// Clase constructora de producto
-class Producto {
-    constructor(id, nombre, medida, color, precio, precioFinal) {
-        this.id = id
-        this.nombre = nombre
-        this.medida = medida
-        this.color = color
-        this.precio = "$ " + precio
-        this.precioFinal = "$ " + precioFinal
-    }
-}
-
-//Base de Datos
-const dataBase =()=> {
-	Productos.push(new Producto(955875, "GLOBO NUMERICO", "5", "ROJO", 5000, 5500))
-	Productos.push(new Producto(955876, "GLOBO DE AGUA", "4", "VERDE", 3000, 3630))
-	Productos.push(new Producto(955877, "GLOBO PAYASO", "3", "AMARILLO", 3500, 4235))
-    Productos.push(new Producto(955878, "GLOBO PAYASO", "3", "AZUL", 3500, 4235))
-    Productos.push(new Producto(955879, "GLOBO PAYASO", "4", "AZUL", 4000, 4840))
-    Productos.push(new Producto(955880, "GLOBO PAYASO", "4", "ROJO", 4000, 4840))
-    Productos.push(new Producto(955880, "GLOBO FLOR", "4", "ROJO", 4000, 4840))
-}
-dataBase()
-
+//IMPORTANDO AL DOCUMENTO ARRAY PRODUCTOS
 const cargarProductos = (param1) => {
     let fila = ""
     param1.forEach(Producto => {
-        fila = `<tr>
-                        <td>${Producto.id}</td>
-                        <td class="nombre">${Producto.nombre}</td>
-                        <td>${Producto.medida}</td>
-                        <td>${Producto.color}</td>
-                        <td>${Producto.precio}</td>
-                        <td>${Producto.precioFinal}</td>
-                        <td><button id="btn${Producto.id}" class="btn btn-danger">Agregar<button></td>
-                    </tr>`
+        fila = `<div class="col" >
+                    <div class="card h-100">
+                        <img src="../assets/images/${Producto.imagenGlobo}" class="card-img-top" alt="${Producto.descripcion}">
+                        <div class="card-body">
+                            <h5 class="card-title">${Producto.nombre}</h5>
+                            <p class="card-text">${Producto.descripcion}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Tamaño: <b>${Producto.medida}</b> Color: <b>${Producto.color}</b></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item">Precio: ${Producto.precio} + IVA = <b>${Producto.precioFinal}</b></li>
+                        </ul>
+                        <div class="card-body">
+                            <button id="btn${Producto.id}" type="button" class="btn-neon">
+                            <span class="span1"></span>
+                            <span class="span2"></span>
+                            <span class="span3"></span>
+                            <span class="span4"></span>
+                            Agregar</button>
+                            <div id="demanda${Producto.id}" class="demandaEstilos position-absolute top-0 start-100 translate-middle badge"></div>
+                            <div id="eliminarProd${Producto.id}"></div>
+                        </div>
+                    </div>
+                </div>`
         ListaDeProductos.innerHTML += fila
     })
 }
 cargarProductos(Productos)
 
-// AGREGAR PRODUCTOS 
-/* const agregarProducto =() =>{
-    let id = NUEVOID()
-    let nombre = prompt("Ingresa la descripción del producto:").toUpperCase()
-    let medida = prompt("Ingresa la medida del producto:").toUpperCase()
-    let color = prompt("Ingresa el color del producto:").toUpperCase()  
-    let precio = prompt("Ingresa el precio del producto:")
-    let precioFinal = Number((precio * IVA).toFixed(2))
-    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal))
-    ListaDeProductos.innerHTML=""
-    cargarProductos(Productos)    
-} */
-
-//EVENTOS JAVASCRIPT////                        BUSCADOR
-//////////////
-/* const inputFiltrar = document.querySelector("#filtroProducto")
-
+//  EVENTO BUSCAR PRODUCTOS
 const filtrarproductos = ()=>{
     let inputf =inputFiltrar.value.toUpperCase()
     if (inputf !== ""){
@@ -69,55 +43,86 @@ const filtrarproductos = ()=>{
                         cargarProductos (Productos)
                     }   
 }
-inputFiltrar.addEventListener("input", filtrarproductos) */
+inputFiltrar.addEventListener("input", filtrarproductos)
+
+// AGREGAR PRODUCTOS 
+const agregarProducto =() =>{
+    let id = NUEVOID()
+    let nombre = prompt("Ingresa el nombre del producto:").toUpperCase()
+    let medida = prompt("Ingresa la medida del producto:").toUpperCase()
+    let color = prompt("Ingresa el color del producto:").toUpperCase()  
+    let precio = prompt("Ingresa el precio del producto:")
+    let precioFinal = Number((precio * IVA).toFixed(2))
+    let descripcion = prompt("Ingresa la descripción del producto:").toUpperCase()
+    let imagenGlobo = prompt("Ingresa el nombre del archivo del producto:").toUpperCase()
+    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal, descripcion, imagenGlobo))
+    ListaDeProductos.innerHTML=""
+    cargarProductos(Productos)
+    eventoBtnAgregar()
+}
+btnAgregarProd.addEventListener("click", agregarProducto)
 
 //LIBRERIA  sweetalert2
-/* const Bienvenida = ()=> {
+const proAgregadoCarrito = ()=> {
     Swal.fire({
         toast: true,
         title: 'Producto agregado al carrito',
         timer: 2500,
-        position: 'start',
+        position: 'center',
         timerProgressBar: true,
         showConfirmButton: false,
         background:  'green',
         color: 'white'
     })
-} */
+}
 
 // EVENTO BOTON DE AGREGAR PRODUCTOS
-
-/* const eventoBtnAgregar = () => {
-    Productos.forEach(Prod => {
-        const btn = document.querySelector(`#btn${Prod.id}`)
-        btn.addEventListener("click", ()=> Bienvenida())
+const eventoBtnAgregar = () => {
+    Productos.forEach(Producto => {
+        const btn = document.querySelector(`#btn${Producto.id}`)
+        btn.addEventListener("click", ()=> proAgregadoCarrito())
+        btn.addEventListener("click", ()=> agregarAlCarrito(Producto.id))
+        //btn.addEventListener("click", ()=> recuperarCarrito())
     })
 }
-eventoBtnAgregar() */
+eventoBtnAgregar()
 
-// BOTON DE AGREGAR PRODUCTOS
-/* const agregarAlCarrito =(id)=> {
-    const Producto = Productos.find(Prod => Prod.id == id)
-          Carrito.push(Producto)
-          localStorage.setItem("Carrito", JSON.stringify(Carrito))
-} */
+// AGREGAR PRODUCTOS AL ARRAY CARRITO
+const agregarAlCarrito =(id)=> {
+    const Producto = Productos.find(Producto => Producto.id == id)
+    Producto.cantidad ++
+    carritos.push(Producto)
+    localStorage.setItem("carritos", JSON.stringify(carritos))
+    document.querySelector(`#demanda${id}`).innerText = Producto.cantidad
+}
 
-/* function recuperoCarrito() {
-    let carrito = JSON.parse(localStorage.getItem("carrito"))
-    let tabla = document.querySelector("tbody")
-        carrito.forEach(prod => {
-            let fila = `<tr>
-                            <td>${prod.nombre}</td>
-                            <td>$ ${prod.importe}</td>
-                        </tr>`
-                        tabla.innerHTML += fila
-        });
-} */
-/* recuperoCarrito() */
+//RECUPERAR ARRAY CARRITOS
+const recuperarCarrito = () => {
+    localStorage.getItem("carritos") ? carritos = JSON.parse(localStorage.getItem("carritos")) : console.log("No se encontró nada")
+}
+recuperarCarrito()
 
-// ORDENAR PRODUCTOS
+//ELIMINAR PRODUCTOS AL ARRAY CARRITO
+const botonEliminar = () => {
+    Productos.forEach(Producto => {
+        const btnPres = document.querySelector(`#eliminarProd${Producto.id}`)
+        btnPres.addEventListener("click", () => eliminarProd(Producto.id))
+    })
+}
+const eliminarProd = (id) => { 
+    let indice = carritos.find ( p => p.id == id)
+    let aEliminar = carritos.indexOf(indice,0)
+    carritos.splice(aEliminar,1)
+    localStorage.setItem("carritos", JSON.stringify(carritos));
+    let fila = document.getElementById(`row${id}`)
+    //fila.remove()
+    //calcularTotal()
+}
 
-/* const ordenarAfabeticamente = () => {
+// ORDENAR PRODUCTOS ALFABETICAMENTE
+const ordenarA_Z = () => {
+    let fila = ""
+    ListaDeProductos.innerHTML = fila
     Productos.sort((a,b)=>{
         if (a.nombre > b.nombre) {
             return 1
@@ -127,5 +132,23 @@ eventoBtnAgregar() */
         }
         return 0
     })
-    console.table(Productos)
-} */
+    cargarProductos(Productos)
+    eventoBtnAgregar()
+}
+btnAZ.addEventListener("click", () => ordenarA_Z())
+const ordenarZ_A = () => {
+    let fila = ""
+    ListaDeProductos.innerHTML = fila
+    Productos.sort((a,b)=>{
+        if (a.nombre < b.nombre) {
+            return 1
+        }
+        if (a.nombre > b.nombre) {
+            return -1
+        }
+        return 0
+    })
+    cargarProductos(Productos)
+    eventoBtnAgregar()
+}
+btnZA.addEventListener("click", () => ordenarZ_A())
