@@ -156,9 +156,9 @@ input[type=search]:focus {
     width: 40%;
 }
 .demandaEstilos{
-    background-color: red;
+    background-color: map-get($map: $colors, $key: 'rojo');
     border-radius: 100%;
-    color: white;
+    color: map-get($map: $colors, $key: 'blancoPuro');
     width: 3em;
     height: 3em;
     display: flex;

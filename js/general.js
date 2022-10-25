@@ -37,3 +37,15 @@ inputNewsletter.addEventListener('keypress', (e) => {
       suscripcionNewsletter()
     }
   });
+
+//RECUPERAR EL CARRITO
+const recuperarCarrito = () => localStorage.getItem("carritos") ? carritos = JSON.parse(localStorage.getItem("carritos")) : console.log("No se encontró nada")
+recuperarCarrito()
+
+//NUMERO DE LOGO DE CARRITO
+let totalDeCarrito = carritos.reduce((acumulador, actual) => acumulador + actual.cantidad, 0);
+const cargarNumero = (param) => {
+  fila = `${param}`
+  navNumCarrito.innerHTML += fila
+}
+cargarNumero(totalDeCarrito)

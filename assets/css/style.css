@@ -191,9 +191,9 @@ input[type=search]:focus {
   width: 40%; }
 
 .demandaEstilos {
-  background-color: red;
+  background-color: #990000;
   border-radius: 100%;
-  color: white;
+  color: #f4f0f0;
   width: 3em;
   height: 3em;
   display: flex;

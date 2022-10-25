@@ -5,8 +5,8 @@ class Producto {
         this.nombre = nombre
         this.medida = medida
         this.color = color
-        this.precio = "$ " + precio
-        this.precioFinal = "$ " + precioFinal
+        this.precio = precio
+        this.precioFinal = precioFinal
         this.descripcion = descripcion
         this.imagenGlobo = imagenGlobo
         this.cantidad = cantidad

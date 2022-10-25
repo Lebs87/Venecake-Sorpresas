@@ -4,6 +4,7 @@
     //DOC HTML EN GENERAL
 const inputNewsletter = document.querySelector("#newsletter")
 const enviarNewsLetter = document.querySelector("#btnNewsletter")
+const navNumCarrito = document.querySelector("#numCarrito")
 
     //DOC HTML TIENDA
 const ListaDeProductos = document.querySelector("#listaDeProductos")
@@ -18,6 +19,7 @@ const btnAumentar = document.querySelector("#aumentar")
 const listaDeCarrito = document.querySelector("#areaCarrito")
 const datosTotales = document.querySelector("#total")
 const btnComprar = document.querySelector("#btn_comprar")
+const btnVaciar = document.querySelector("#btn_vaciar")
 
     //DOC HTML GALERIA
 const galeriaBouquets = document.querySelector("#galeria_section_bouquets")

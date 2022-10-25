@@ -2,7 +2,7 @@
 const cargarProductos = (param1) => {
     let fila = ""
     param1.forEach(Producto => {
-        fila = `<div class="col" >
+        fila = `<div class="col" id="producto${Producto.id}">
                     <div class="card h-100">
                         <img src="../assets/images/${Producto.imagenGlobo}" class="card-img-top" alt="${Producto.descripcion}">
                         <div class="card-body">
@@ -55,7 +55,8 @@ const agregarProducto =() =>{
     let precioFinal = Number((precio * IVA).toFixed(2))
     let descripcion = prompt("Ingresa la descripción del producto:").toUpperCase()
     let imagenGlobo = prompt("Ingresa el nombre del archivo del producto:").toUpperCase()
-    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal, descripcion, imagenGlobo))
+    let cantidad = 0
+    Productos.push(new Producto (id, nombre, medida, color, precio, precioFinal, descripcion, imagenGlobo, cantidad))
     ListaDeProductos.innerHTML=""
     cargarProductos(Productos)
     eventoBtnAgregar()
@@ -80,9 +81,14 @@ const proAgregadoCarrito = ()=> {
 const eventoBtnAgregar = () => {
     Productos.forEach(Producto => {
         const btn = document.querySelector(`#btn${Producto.id}`)
-        btn.addEventListener("click", ()=> proAgregadoCarrito())
-        btn.addEventListener("click", ()=> agregarAlCarrito(Producto.id))
-        //btn.addEventListener("click", ()=> recuperarCarrito())
+        btn.addEventListener("click", ()=> {
+            proAgregadoCarrito()
+            agregarAlCarrito(Producto.id)
+            navNumCarrito.innerHTML = "";
+            recuperarCarrito()
+            totalDeCarrito = carritos.reduce((acumulador, actual) => acumulador + actual.cantidad, 0);
+            cargarNumero(totalDeCarrito)
+        })
     })
 }
 eventoBtnAgregar()
@@ -93,14 +99,30 @@ const agregarAlCarrito =(id)=> {
     Producto.cantidad ++
     carritos.push(Producto)
     localStorage.setItem("carritos", JSON.stringify(carritos))
+/*     const nuevoVAlor =()=>{
+        
+    }
+    let valorFinal= nuevoVAlor */
     document.querySelector(`#demanda${id}`).innerText = Producto.cantidad
 }
 
 //RECUPERAR ARRAY CARRITOS
-const recuperarCarrito = () => {
-    localStorage.getItem("carritos") ? carritos = JSON.parse(localStorage.getItem("carritos")) : console.log("No se encontró nada")
+const recuperarCarrito2 = () => {
+    if (localStorage.getItem("carritos")){
+        carritos.forEach(Producto => {
+            console.log(Producto.id)
+            document.querySelector(`#demanda${Producto.id}`).innerText = Producto.cantidad
+        })
+const array1 = Producto.cantidad     
+            const initialValue = 0;
+            const sumWithInitial = array1.reduce(
+              (a, b) => a + b,
+              initialValue
+            );
+            console.log(sumWithInitial);
+    }else{console.log("No se encontró nada")} 
 }
-recuperarCarrito()
+document.addEventListener("DOMContentLoaded", recuperarCarrito2())
 
 //ELIMINAR PRODUCTOS AL ARRAY CARRITO
 const botonEliminar = () => {
@@ -118,7 +140,9 @@ const eliminarProd = (id) => {
     //fila.remove()
     //calcularTotal()
 }
-
+const remover =()=>{
+    console.log("remover no disponible")
+}
 // ORDENAR PRODUCTOS ALFABETICAMENTE
 const ordenarA_Z = () => {
     let fila = ""

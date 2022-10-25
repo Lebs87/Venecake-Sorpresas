@@ -1,5 +1,4 @@
 // ARRAYS DEL PROYECTO
-    // TIENDA.JS
 const Productos = []
 let carritos = []
 

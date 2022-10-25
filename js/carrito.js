@@ -1,9 +1,12 @@
+//SUMAR TOTALES DEL CARRITO
+let totalFinal = carritos.reduce((acumulador, prod) => acumulador + prod.precioFinal, 0)
+
 // RECUPERAR PRODUCTOS DEL ARRAY CARRITO
 const recuperoCarrito = () => {
     if (localStorage.getItem("carritos") !== null){
     let carrito = JSON.parse(localStorage.getItem("carritos"))
         carrito.forEach(prod => {
-            let articulosCarrito = `<article class="card p-3">
+            let articulosCarrito = `<article class="card p-3" id="cajaProducto${prod.id}">
                             <div class="row g-0">
                                 <section class="col-md-3">
                                     <img src="../assets/images/${prod.imagenGlobo}" class="img-fluid rounded-start imagenCarrito" alt="...">
@@ -28,16 +31,18 @@ const recuperoCarrito = () => {
                                 </div>
                             </div>
                             <div class="d-flex justify-content-end">
-                                <span class="material-symbols-outlined mx-2 mb-1">delete</span>
-                                <span class="material-symbols-outlined mx-2 mb-1">visibility</span>
+                                <span class="material-symbols-outlined mx-2 mb-1" id="eliminar${prod.id}">delete</span>
+                                <a href="./tienda.html#producto${prod.id}"><span class="material-symbols-outlined mx-2 mb-1">visibility</span></a>
                             </div>
                         </article>`
             listaDeCarrito.innerHTML += articulosCarrito
         });
     const cargaGeneralCarrito = () => {
-    let totalCompra = `<p><b>parametro</b></p>`
+    let totalCompra = `<p><b>$ ${totalFinal}</b></p>`
+    let vaciarCarrito = `<button class="btn btn-danger">Vaciar Carrito</button>`
     let finalizarCompra = `<button class="btn btn-danger">Continuar Compra</button>`
         datosTotales.innerHTML += totalCompra
+        btnVaciar.innerHTML += vaciarCarrito
         btnComprar.innerHTML += finalizarCompra
     }
     cargaGeneralCarrito()
@@ -51,6 +56,7 @@ const recuperoCarrito = () => {
 }
 recuperoCarrito()
 
+//EVENTO COMPRA FINALIZADA
 const compraFinalizada = () => {
     Swal.fire({
         title: '¿Quieres completar la compra?',
@@ -60,53 +66,92 @@ const compraFinalizada = () => {
         confirmButtonColor: '#ff545452',
         cancelButtonColor: '#a52a2a',
         confirmButtonText: 'Comprar'
-      }).then((result) => {
+    }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire(
-            'Listo!',
-            'Compra Realizada',
-            'success'
-          )
+            vaciarElCarrito()
+          Swal.fire({
+            text: "Listo! compra realizada",
+            confirmButtonText: 'Ok',
+          }).then((result) => {
+            if (result.isConfirmed) {
+                redireccionarIndex()}})
         }
       })
 }
 btnComprar.addEventListener("click", compraFinalizada)
 
-//RECUPERAR ARRAY CARRITOS
-const recuperarCarrito = () => {
-    localStorage.getItem("carritos") ? carritos = JSON.parse(localStorage.getItem("carritos")) : console.log("No se encontró nada")
+//DIRECCIONAR AL INDEX DESDE OTRA PAGINA
+const redireccionarIndex=()=>location.href="../index.html"
+
+//VACIAR EL CARRITO
+const vaciarElCarrito =()=>{
+    localStorage.removeItem('carritos')
+    listaDeCarrito.innerHTML = ""
+    datosTotales.innerHTML = ""
+    btnVaciar.innerHTML = ""
+    btnComprar.innerHTML = ""
+    navNumCarrito.innerHTML = ""
+    recuperoCarrito()
+    
 }
-recuperarCarrito()
+btnVaciar.addEventListener("click", vaciarElCarrito)
 
-const calcularTotal = () => {
-    const valorConIVA = carritos.precioFinal
-    const total = valorConIVA.reduce((tot, pres) => tot + pres, 0)
-    let leyenda = document.getElementById("total")
-    total > 0 ? leyenda.innerText = `El total de su compra será de $ ${total}` : leyenda.innerText = `No ha agregado nada al presupuesto.`
-    total > 0 ? btnFinalizar.addEventListener("click", CompletarCompra) : btnFinalizar.addEventListener("click", CarritoVacio)
+//BOTON ELIMINAR POR PRODUCTO
+const BotonEliminar =()=> {
+    carritos.forEach(prod => {
+        const btnEliminar = document.querySelector(`#eliminar${prod.id}`)
+        btnEliminar.addEventListener("click", () => {eliminarProducto(`${prod.id}`)
+        navNumCarrito.innerHTML = "";
+        recuperarCarrito()
+        totalDeCarrito = carritos.reduce((acumulador, actual) => acumulador + actual.cantidad, 0);
+        cargarNumero(totalDeCarrito)
+    })
+    })
+}
+BotonEliminar()
+
+const eliminarProducto =(id)=> { 
+    let indice = carritos.find ( prod => prod.id == id)
+    let aEliminar = carritos.indexOf(indice,0)
+    carritos.splice(aEliminar,1)
+    localStorage.setItem("carritos", JSON.stringify(carritos));
+    listaDeCarrito.innerHTML = ""
+    datosTotales.innerHTML = ""
+    btnComprar.innerHTML = ""
+    let totalFinal = carritos.reduce((acumulador, prod) => acumulador + prod.precioFinal, 0)
+    //cargaGeneralCarrito()
+    recuperoCarrito()
+    
+    //cargaGeneralCarrito()
+    //cajaProducto == ""
+    
+    
+    //fila.remove()
+    //calcularTotal()
 }
 
 
-//CANTIDAD DE PRODUCTOS A COMPRAR
-/* const cambiarCantidad = (x) => {
-    let id = x;
-    let min = cantidadProducto.min;
-    let max = cantidadProducto.max;
-    let step = cantidadProducto.step;
-    let val = cantidadProducto.value;
-    let cambio = (id == "aumentar") ? (step*1) : (step * -1);
-    let nuevoValor = parseInt(val) + cambio;
-    nuevoValor >= min && nuevoValor <= max ? cantidadProducto.value = nuevoValor : console.log("Hay un error en carrito js, const cambiar cantidad")
-}
-btnDisminuir.addEventListener("mousedown", ()=>(cambiarCantidad("disminuir")))
-btnAumentar.addEventListener("mousedown", ()=>(cambiarCantidad("aumentar"))) */
 
 
-let DESC = -35000 || 0
-//Reduce a un único resultado valores de un array
-const calcularCarrito = () => {
-    let total = carrito.reduce((acumulador, producto) => acumulador + producto.importe, DESC)
-    console.log("Total del carrito:", total)
-}
-/////////////////trabajar calcular carrito
+//REMOVIENDO LOS PRODUCTOS DEL CARRO
+/* function remove(e) {
+    let idProd;
+    if (e.target.classList.contains("remove")) {
+        idProd = e.target.getAttribute("data-id");
+        idProd = cart.find((element) => element.name == idProd);
+    }
+
+    if (idProd.quantity === 1) {
+        let product = cart.find((prod) => prod.name == idProd.name);
+        let index = cart.indexOf(product);
+        cart.splice(index, 1);
+        updateCart(cart);
+
+    } else if (idProd) {
+        idProd.quantity--;
+        updateCart(cart)
+    }
+    saveInLocalStorage("cart", cart)
+} */
+
 
