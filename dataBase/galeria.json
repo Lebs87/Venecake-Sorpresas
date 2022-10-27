@@ -28,23 +28,23 @@
     "categoria": "Bouquets",
     "nombre": "Bouquet rojo",
     "ruta": "#",
-    "imagen": "bouquetAzul.webp",
+    "imagen": "bouquet_rojo.jpg",
     "descripcion": "Hermoso Bouquet rojo"
     },
     {
     "id": 5,
     "categoria": "Pared",
-    "nombre": "Pared rojo",
+    "nombre": "Pared de Flamencos",
     "ruta": "#",
-    "imagen": "paredAzul.jpg",
-    "descripcion": "Hermosa Pared rojo"
+    "imagen": "paredFlamencos.jpg",
+    "descripcion": "Hermosa Pared rosada de Flamencos"
     },
     {
     "id": 6,
     "categoria": "Guirnaldas",
     "nombre": "Guirnalda rojo",
     "ruta": "#",
-    "imagen": "guirnaldaAzul.jpg",
+    "imagen": "guirnaldaRoja.webp",
     "descripcion": "Hermosa Guirnalda rojo"
     }
 ]

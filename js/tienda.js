@@ -99,30 +99,8 @@ const agregarAlCarrito =(id)=> {
     Producto.cantidad ++
     carritos.push(Producto)
     localStorage.setItem("carritos", JSON.stringify(carritos))
-/*     const nuevoVAlor =()=>{
-        
-    }
-    let valorFinal= nuevoVAlor */
     document.querySelector(`#demanda${id}`).innerText = Producto.cantidad
 }
-
-//RECUPERAR ARRAY CARRITOS
-const recuperarCarrito2 = () => {
-    if (localStorage.getItem("carritos")){
-        carritos.forEach(Producto => {
-            console.log(Producto.id)
-            document.querySelector(`#demanda${Producto.id}`).innerText = Producto.cantidad
-        })
-const array1 = Producto.cantidad     
-            const initialValue = 0;
-            const sumWithInitial = array1.reduce(
-              (a, b) => a + b,
-              initialValue
-            );
-            console.log(sumWithInitial);
-    }else{console.log("No se encontró nada")} 
-}
-document.addEventListener("DOMContentLoaded", recuperarCarrito2())
 
 //ELIMINAR PRODUCTOS AL ARRAY CARRITO
 const botonEliminar = () => {
@@ -137,12 +115,11 @@ const eliminarProd = (id) => {
     carritos.splice(aEliminar,1)
     localStorage.setItem("carritos", JSON.stringify(carritos));
     let fila = document.getElementById(`row${id}`)
-    //fila.remove()
-    //calcularTotal()
 }
 const remover =()=>{
     console.log("remover no disponible")
 }
+
 // ORDENAR PRODUCTOS ALFABETICAMENTE
 const ordenarA_Z = () => {
     let fila = ""
